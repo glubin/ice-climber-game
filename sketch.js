@@ -45,7 +45,7 @@ function draw() {
 function checkWon(){
 	if (counter >= 10){
 		alert("you lose!");
-    window.open("www.greglubin.com","_self")
+    		location.reload();
 	}
 	if (climber.position.y < 60 & climber.position.x > 410 & climber.position.x < 440){
 		alert("you win!");
