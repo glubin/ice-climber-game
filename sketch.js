@@ -9,9 +9,6 @@ function setup() {
   var xStart = random(0,800);
   climber = createSprite(xStart,485, 25, 25);
   var xGoal = random(0,800);
-  ice = new Pain();
-
-
 }
 
 function draw() {
@@ -29,8 +26,6 @@ function draw() {
   if (climber.velocity.x >= 1){climber.velocity.x = 0;}
   if (climber.velocity.x <= -1){climber.velocity.x = 0;}
   checkWon();
-  
-
 
   drawSprites();
 }
