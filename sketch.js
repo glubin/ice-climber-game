@@ -49,6 +49,7 @@ function checkWon(){
 	}
 	if (climber.position.y < 60 & climber.position.x > 410 & climber.position.x < 440){
 		alert("you win!");
+		location.reload();
 	}
 }
 
