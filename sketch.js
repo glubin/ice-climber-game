@@ -21,10 +21,10 @@ function draw() {
   if(keyWentDown("a") || keyWentDown(LEFT_ARROW)){climber.velocity.x += ClimbSpeed; counter = counter + 1; ice = new Pain();}
   if(keyWentDown("d") || keyWentDown(RIGHT_ARROW)){climber.velocity.x -= ClimbSpeed; counter = counter + 1; ice = new Pain();}
  
-  if (climber.velocity.y >= 1){climber.velocity.y = 0;}
-  if (climber.velocity.y <= -1){climber.velocity.y = 0;}
-  if (climber.velocity.x >= 1){climber.velocity.x = 0;}
-  if (climber.velocity.x <= -1){climber.velocity.x = 0;}
+  if (climber.velocity.y >= 1.5){climber.velocity.y = 0;}
+  if (climber.velocity.y <= -1.5){climber.velocity.y = 0;}
+  if (climber.velocity.x >= 1.5){climber.velocity.x = 0;}
+  if (climber.velocity.x <= -1.5){climber.velocity.x = 0;}
   checkWon();
 
   drawSprites();
