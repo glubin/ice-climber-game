@@ -44,10 +44,11 @@ function draw() {
 
 function checkWon(){
 	if (counter >= 10){
-		console.log("you lose!");
+		alert("you lose!");
+    window.open("www.greglubin.com","_self")
 	}
 	if (climber.position.y < 60 & climber.position.x > 410 & climber.position.x < 440){
-		console.log("you win!");
+		alert("you win!");
 	}
 }
 
