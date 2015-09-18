@@ -3,11 +3,16 @@ var ClimbSpeed = -0.25;
 var summit;
 var ice;
 var counter = 0;
+var obstacles;
+var initClimb;
 
 function setup() {
   createCanvas(800,500);
   var xStart = random(0,800);
   climber = createSprite(xStart,485, 25, 25);
+  initClimb = new Group();
+  initClimb.add(climber);
+  obstacles = new Group();
   var xGoal = random(0,800);
 }
 
@@ -27,6 +32,11 @@ function draw() {
   if (climber.velocity.x <= -1.5){climber.velocity.x = 0;}
   checkWon();
 
+  if (initClimb.overlap(obstacles)){
+    console.log("HIT!");
+  }
+
+
   drawSprites();
 }
 
@@ -45,5 +55,6 @@ function Pain() {
 	this.height = random(10,200);
 	this.x = random(0,800);
 	this.y = random(0,400);
-	this.sprite = createSprite(this.x, this.y, this.width, this.height);
+	newSprite = createSprite(this.x, this.y, this.width, this.height);
+  obstacles.add(newSprite);
 }
