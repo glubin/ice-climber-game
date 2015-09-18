@@ -32,9 +32,10 @@ function draw() {
   if (climber.velocity.x <= -1.5){climber.velocity.x = 0;}
   checkWon();
 
-  if (initClimb.overlap(obstacles)){
-    console.log("HIT!");
+  for (i=0; i<obstacles.length; i++){
+    console.log(climber.collide(obstacles[i]));
   }
+
 
 
   drawSprites();
