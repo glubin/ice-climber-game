@@ -84,7 +84,7 @@ function timer()
   count=count-1;
   if (count <= 0)
   {
-    alert("done!");
+    alert("you lose!");
     location.reload();
   }
   if (count == 40){
@@ -105,7 +105,7 @@ function timer()
 
 
 function displayTimer(){
-  document.getElementById("showCounter").innerHTML=count + " secs";
+  document.getElementById("showCounter").innerHTML=count + " seconds";
 }
 
 function chilly(){
